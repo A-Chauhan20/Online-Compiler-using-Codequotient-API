@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Compiler</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-GZ1RIgZaSc8rnco/8CXfRdCpDxRCphenIiZ2ztLy3XQfCbQUSCuk8IudvNHxkRA3oUg6q0qejgN/qqyG1duv5Q==" crossorigin="anonymous"></script>
+
+<style>
+    #editor { 
+        height: 450px;
+        width: 100%;
+    }
+</style>
+<script src = "script.js"></script>
+<body>
+    
+    <div class = "container">
+<div class = "heading text-center mt-4">
+    <h2>CODE COMPILER</h2>
+</div>
+        <select  name="language" id="languageSelector">
+            <option value="Java">Java</option>
+            <option value="C++">C++</option>
+            <option value="C">C</option>
+            <option value="Python">Python</option>
+            <option value="Javascript">Javascript</option>
+        </select>
+
+
+        <div id="editor" class="mt-4" ></div>
+
+
+        <div class = "container mt-4" style="height: 250px; background-color: black; color: white;" id="outputPortion">
+            
+            <p id = "outputpanel">OUTPUT : </p>
+        </div>
+       <div class="text-center">
+        <button type="button" class="btn btn-primary mt-4" onclick="initProcess()" id="compileBtn">Primary
+</button>
+       </div>
+
+        <script>
+            var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/javascript");
+        </script>
+    </body>
+    </div>
+</html>
